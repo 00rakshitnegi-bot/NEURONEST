@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEURONEST - Founder</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ================= HEADER ================= */
+
+        .header {
+            height: 100px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            height: 75px;
+            width: auto;
+        }
+
+        .heading {
+            color: #3c2218;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            margin-left: 30px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #7b4a35;
+        }
+
+
+        /* ================= MOBILE HEADER ================= */
+
+        .mobile-header {
+            display: none;
+        }
+
+
+        /* ================= PROFILE SECTION ================= */
+
+        .dtlbox {
+            min-height: 600px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 70px 30px;
+        }
+
+        .profile-card {
+            width: 900px;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 70px;
+            padding: 50px;
+            border: 1px solid #333;
+            border-radius: 25px;
+            background: #0b0b0b;
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.05);
+        }
+
+
+        /* ================= IMAGE ================= */
+
+        .maampicbox {
+            width: 350px;
+            height: 400px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 12px;
+            border-radius: 20px;
+        }
+
+        .maampicbox img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+            display: block;
+        }
+
+
+        /* ================= TEXT ================= */
+
+        .dtltext {
+            color: white;
+        }
+
+        .small-title {
+            color: #b58b72;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .dtltext h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 55px;
+            color: white;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .designation {
+            color: #d6b9a6;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .description {
+            color: #bdbdbd;
+            line-height: 1.7;
+            font-size: 16px;
+            max-width: 400px;
+            margin-bottom: 25px;
+        }
+
+        .email {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border: 1px solid #6b4735;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .email:hover {
+            background-color: #6b4735;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        .footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .footer h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 36px;
+            margin-bottom: 8px;
+            color: #3c2218;
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .header {
+                display: none;
+            }
+
+            .mobile-header {
+                height: 70px;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+            }
+
+            .mobile-header img {
+                height: 50px;
+                width: auto;
+                display: block;
+            }
+
+            .mobile-header h1 {
+                margin: 0;
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 27px;
+                color: #3c2218;
+                text-align: center;
+            }
+
+            .mobile-dropdown {
+                position: relative;
+            }
+
+            .mobile-dropdown button {
+                background: none;
+                border: none;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: 700;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            .mobile-dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 35px;
+                width: 180px;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                z-index: 100;
+            }
+
+            .mobile-dropdown-content a {
+                display: block;
+                padding: 13px 15px;
+                color: black;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .mobile-dropdown-content a:hover {
+                background-color: #f2f2f2;
+            }
+
+            .mobile-dropdown:hover .mobile-dropdown-content {
+                display: block;
+            }
+
+
+            /* Profile */
+
+            .dtlbox {
+                padding: 40px 20px;
+            }
+
+            .profile-card {
+                flex-direction: column;
+                gap: 35px;
+                padding: 30px 20px;
+                text-align: center;
+            }
+
+            .maampicbox {
+                width: 250px;
+                height: 300px;
+            }
+
+            .dtltext h2 {
+                font-size: 45px;
+            }
+
+            .designation {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+            .footer {
+                padding: 30px 15px;
+            }
+
+            .footer h2 {
+                font-size: 30px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= DESKTOP HEADER ================= -->
+
+    <header class="header">
+
+        <a href="index.html">
+            <img class="logo"
+                 src="neuronest photos/nnlogo.png"
+                 alt="NEURONEST HOME PAGE">
+        </a>
+
+        <h1 class="heading">
+            NEURONEST - "Where Science Meets Sensitivity"
+        </h1>
+
+        <nav>
+            <a href="magazine.html">MAGAZINE</a>
+            <a href="events.html">EVENTS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contactdetail.html">CONTACT DETAILS</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MOBILE HEADER ================= -->
+
+    <div class="mobile-header">
+
+        <a href="index.html">
+            <img src="neuronest photos/nnlogo.png"
+                 alt="NEURONEST HOME PAGE">
+        </a>
+
+        <h1>NEURONEST</h1>
+
+        <div class="mobile-dropdown">
+
+            <button>MORE ▾</button>
+
+            <div class="mobile-dropdown-content">
+                <a href="magazine.html">MAGAZINE</a>
+                <a href="events.html">EVENTS</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="contactdetail.html">CONTACT DETAILS</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <main class="dtlbox">
+
+        <div class="profile-card">
+
+            <div class="maampicbox">
+
+                <img src="neuronest photos/manjumaamid.jpeg"
+                     alt="Manjuma Amin">
+
+            </div>
+
+
+            <div class="dtltext">
+
+                <div class="small-title">
+                    NEURONEST LEADERSHIP
+                </div>
+
+                <h2>
+                    Manju Tiwari
+                </h2>
+
+                <div class="designation">
+                    Founder & CEO
+                </div>
+
+                <p class="description">
+                    Leading Neuronest with a vision to bring together
+                    scientific knowledge, innovation, and human sensitivity.
+                </p>
+
+                <a class="email"
+                   href="mailto:manjuma@neuronest.com">
+                    ✉ manjuma@neuronest.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <h2>NEURONEST</h2>
+
+        <p>
+            "Where Science Meets Sensitivity"
+        </p>
+
+        <p>
+            © 2026 Neuronest. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
