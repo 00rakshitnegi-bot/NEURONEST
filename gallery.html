@@ -14,13 +14,18 @@
 
         body {
             margin: 0;
-            background-image: url("neuronest photos/background.jpeg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: linear-gradient(
+                to bottom,
+                white 0%,
+                white 7%,
+                rgba(234, 216, 204, 0.5) 15%,
+                rgba(234, 216, 204, 0.5) 85%,
+                white 93%,
+                white 100%
+            );
         }
 
+        
         .header {
             background-color: white;
             height: 100px;
@@ -80,8 +85,41 @@
             color: black;
             font-family: dm sans, sans-serif;
         }
-
         
+        .galleryhead{
+            text-align: center;
+            
+            font-family: Bebas Neue;
+            font-size: 50px;
+        }
+        
+        .separator {
+            border-top: 2px solid black;
+        }
+
+        .container{
+            text-align: center;
+        }
+
+        .gallerypics{
+            border: 3px solid #3c2218;
+            display: inline-block;
+            
+            margin: 50px 10px;
+            padding-bottom: 5px;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+        }
+
+        .gallerypics:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallerypics img{
+            height: 250px;
+        }
 
 
         .footer {
@@ -237,10 +275,53 @@
     </div>
 
     </div>
+     
+        <h1 class="galleryhead">
+            "WELCOME TO THE GALLERY"
+        </h1>
+    
+    
+    <div class="separator"></div>
 
-
-
+    <div class="container">
+         
+            <div class="gallerypics">
+                
+                <img src="neuronest photos/world mental health 2025/5.jpeg" height=" 400">
+                <div class="view">
+                    <h4> WORLD MENTAL HEALTH DAY, 2025 </h4>
+                    <div class="album">
+                        <a href="worldhealth2025.html"> VIEW ALBUM</a>
+                    </div>
+                </div>
         
+            </div>
+
+            <div class="gallerypics">
+                
+                <img src="neuronest photos/BRAINAWARNESS2026/1.jpeg" height=" 400">
+                <div class="view">
+                    <h4> BRAIN AWARENESS WEEK, MARCH 2026</h4>
+                    <div class="album">
+                        <a href="brainawarness.html"> VIEW ALBUM</a>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="gallerypics">
+                
+                <img src="neuronest photos/careerguidance2026/1.jpeg" height=" 400">
+                <div class="view">
+                    <h4> CAREER GUIDANCE, JULY 2026</h4>
+                    <div class="album">
+                        <a href="career2026.html"> VIEW ALBUM</a>
+                    </div>
+                </div>
+        
+            </div>
+
+    </div>
 
     <footer class="footer">
 

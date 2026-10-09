@@ -14,11 +14,15 @@
 
         body {
             margin: 0;
-            background-image: url("neuronest photos/background.jpeg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: linear-gradient(
+                to bottom,
+                white 0%,
+                white 7%,
+                rgba(234, 216, 204, 0.5) 15%,
+                rgba(234, 216, 204, 0.5) 85%,
+                white 93%,
+                white 100%
+            );
         }
 
         .header {
