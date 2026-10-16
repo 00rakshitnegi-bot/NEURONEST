@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MAGAZINE - NEURONEST</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            background: linear-gradient(
+                to bottom,
+                white 0%,
+                white 7%,
+                rgba(234, 216, 204, 0.5) 15%,
+                rgba(234, 216, 204, 0.5) 85%,
+                white 93%,
+                white 100%
+            );
+        }
+
+        .header {
+            background-color: white;
+            height: 100px;
+            padding-top: 1px;
+        }
+
+        .heading {
+            color: #3c2218;
+            font-family: Bebas Neue;
+            margin-left: 150px;
+            margin-top: 30px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            height: 75px;
+        }
+
+        .mag {
+            position: absolute;
+            top: 30px;
+            right: 510px;
+            font-weight: bold;
+            font-size: large;
+            color: black;
+            font-family: dm sans, sans-serif;
+        }
+
+        .eve {
+            position: absolute;
+            top: 30px;
+            right: 400px;
+            font-weight: bold;
+            font-size: large;
+            color: black;
+            font-family: dm sans, sans-serif;
+        }
+
+        .gal {
+            position: absolute;
+            top: 30px;
+            right: 280px;
+            font-weight: bold;
+            font-size: large;
+            color: black;
+            font-family: dm sans, sans-serif;
+        }
+
+        .more {
+            position: absolute;
+            top: 30px;
+            right: 75px;
+            font-weight: bold;
+            font-size: large;
+            color: black;
+            font-family: dm sans, sans-serif;
+        }
+
+        .container,
+        .container2 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin: 40px 30px;
+            align-items: start;
+        }
+
+        .container a,
+        .container2 a {
+            display: block;
+            overflow: hidden;
+        }
+
+        .container img,
+        .container2 img {
+            display: block;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .container img:hover,
+        .container2 img:hover {
+            transform: scale(1.03);
+        }
+
+        .brainhead {
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+            font-size: 50px;
+            margin: 35px 15px;
+        }
+
+
+        .footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 40px 20px;
+            
+        }
+
+        .footer h2 {
+            margin: 0 0 10px 0;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: xx-large;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: large;
+        }
+
+        .mobile-header {
+            display: none;
+        }
+        
+
+        @media (max-width: 768px) {
+
+            .header {
+                display: none;
+            }
+
+            .mobile-header {
+                height: 70px;
+                padding: 0 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                box-sizing: border-box;
+            }
+
+            .mobile-header > a {
+                display: block;
+                flex-shrink: 0;
+            }
+
+            .mobile-header img {
+                height: 50px;
+                width: auto;
+                display: block;
+            }
+
+            .mobile-header h1 {
+                margin: 0;
+                padding: 0;
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 28px;
+                color: #3c2218;
+                text-align: center;
+                flex: 1;
+            }
+
+            .mobile-dropdown {
+                position: relative;
+                flex-shrink: 0;
+            }
+
+            .mobile-dropdown button {
+                background: none;
+                border: none;
+                padding: 5px;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: bold;
+                font-size: 16px;
+                color: black;
+                cursor: pointer;
+            }
+
+            .mobile-dropdown-content {
+                display: none;
+                position: absolute;
+                right: 0;
+                top: 35px;
+                width: 170px;
+                background-color: white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                z-index: 100;
+            }
+
+            .mobile-dropdown-content a {
+                display: block;
+                padding: 12px 15px;
+                text-decoration: none;
+                color: black;
+                font-family: 'DM Sans', sans-serif;
+                font-weight: bold;
+                font-size: 14px;
+            }
+
+            .mobile-dropdown-content a:hover {
+                background-color: #f2f2f2;
+            }
+
+            .mobile-dropdown:hover .mobile-dropdown-content {
+                display: block;
+            }
+
+            /* Mobile gallery */
+            .brainhead {
+                font-size: 32px;
+                line-height: 1.2;
+                margin: 30px 15px 20px;
+            }
+
+            .container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+                margin: 20px 12px;
+            }
+
+            .container img {
+                height: 180px;
+            }
+
+            /* Center the fourth photo */
+            .container2 {
+                display: flex;
+                justify-content: center;
+                margin: 20px 12px 35px;
+            }
+
+            .container2 a {
+                width: 70%;
+                max-width: 350px;
+            }
+
+            .container2 img {
+                height: 220px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            /* Prevent horizontal scrolling */
+            body {
+                overflow-x: hidden;
+            }
+
+            .footer {
+                padding: 30px 15px;
+            }
+
+            .footer h2 {
+                font-size: 30px;
+            }
+
+            .footer p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header"> <a href="index.html"> <img class="logo" src="neuronest photos/nnlogo.png" height="100px" alt="NEURONEST HOME PAGE"> </a> 
+        <h1 class="heading"> NEURONEST - "where science meets sensitivity" </h1> 
+        <nav> <a href="magazine.html"> <p class="mag">MAGAZINE</p> </a> 
+            <a href="events.html"> <p class="eve">EVENTS</p> </a> 
+            <a href="gallery.html"> <p class="gal">GALLERY</p> </a> 
+            <a href="contactdetail.html"> <p class="more">CONTACT DETAILS</p> 
+            </a> 
+        </nav> 
+    </header>
+
+    <div class="mobile-header">
+
+    <a href="index.html">
+        <img src="neuronest photos/nnlogo.png" alt="NEURONEST HOME PAGE">
+    </a>
+
+    <h1>NEURONEST</h1>
+
+    <div class="mobile-dropdown">
+        <button>MORE ▾</button>
+
+        <div class="mobile-dropdown-content">
+            <a href="magazine.html">MAGAZINE</a>
+            <a href="events.html">EVENTS</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contactdetail.html">CONTACT DETAILS</a>
+        </div>
+    </div>
+
+    </div>
+
+    <h1 class="brainhead"> "INAUGURATION OF 'SRIJAN' " </h1>
+
+    <div class="container">
+
+        <a href="neuronest photos/INAUGRATION/1.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/1.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/2.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/2.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/3.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/3.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/4.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/4.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/5.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/5.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/6.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/6.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/7.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/7.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/8.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/8.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/9.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/9.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/10.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/10.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/11.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/11.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/12.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/12.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/13.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/13.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/14.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/14.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/18.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/18.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/15.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/15.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/16.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/16.jpeg" >
+        </a>
+
+        <a href="neuronest photos/INAUGRATION/17.jpeg" target="_blank" rel="noopener noreferrer">
+            <img src="neuronest photos/INAUGRATION/17.jpeg" >
+        </a>
+
+        
+
+
+
+    </div>
+
+
+
+        
+
+    <footer class="footer">
+
+        <h2>NEURONEST</h2>
+
+        <p>"Where Science Meets Sensitivity"</p>
+
+        <p>© 2026 Neuronest. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
+

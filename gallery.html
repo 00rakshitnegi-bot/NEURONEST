@@ -97,19 +97,25 @@
             border-top: 2px solid black;
         }
 
-        .container{
-            text-align: center;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 30px 50px;
+            justify-items: center;
+            align-items: stretch;
         }
 
-        .gallerypics{
+
+        .gallerypics {
             border: 3px solid #3c2218;
-            display: inline-block;
-            
-            margin: 50px 10px;
             padding-bottom: 5px;
-            justify-content: center;
+            margin: 0;
+            width: 100%;
+            max-width: 350px;
+            box-sizing: border-box;
+            text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            
         }
 
         .gallerypics:hover {
@@ -117,8 +123,11 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
 
-        .gallerypics img{
+        .gallerypics img {
+            width: 100%;
             height: 250px;
+            object-fit: cover;
+            display: block;
         }
 
 
@@ -228,6 +237,24 @@
                 display: block;
             }
 
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 25px;
+            }
+
+            .gallerypics {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto;
+            }
+
+            .gallerypics img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+
             .footer {
                 padding: 30px 15px;
             }
@@ -316,6 +343,18 @@
                     <h4> CAREER GUIDANCE, JULY 2026</h4>
                     <div class="album">
                         <a href="career2026.html"> VIEW ALBUM</a>
+                    </div>
+                </div>
+        
+            </div>
+
+            <div class="gallerypics">
+                
+                <img src="neuronest photos/INAUGRATION/COVER.jpeg" height=" 400">
+                <div class="view">
+                    <h4> "INAUGURATION OF 'SRIJAN' " </h4>
+                    <div class="album">
+                        <a href="inaugration.html"> VIEW ALBUM</a>
                     </div>
                 </div>
         
