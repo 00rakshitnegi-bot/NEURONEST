@@ -123,10 +123,10 @@
             margin: 50px;
         }
 
-        .srilogo {
-            width: 100px;
-            height: auto;
+        .welcomebox img{
+            height: 100px;
             margin: 0;
+            margin-top: 5px;
             flex-shrink: 0;
         }
 
@@ -264,18 +264,21 @@
                 line-height: 1.1;
             }
             
+            
             .welcomebox {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
+                gap: 15px;
                 margin: 20px;
             }
 
-            .srilogo {
-                width: 60px;
-                height: auto;
-                margin: 0;
+            .welcomebox img {
+                height: 100px;
+                width: auto;
+                display: block;
+                margin: 20 auto;
                 flex-shrink: 0;
             }
 
@@ -283,9 +286,10 @@
                 margin: 0;
                 padding-bottom: 12px;
                 font-size: 25px;
-                text-align: left;
+                text-align: center;
                 border-bottom: none;
             }
+
 
 
             .magazinecontent {
@@ -371,7 +375,7 @@
 
         <div class="welcomebox">
             <a href="neuronest photos/srijan logo.png" target="_blank" rel="noopener noreferrer">
-                <img class="srilogo" src="neuronest photos/srijan logo.png" height="100">
+                <img  src="neuronest photos/srijan logo.png">
             </a>
 
             <h1 class="welcome">"WELCOME TO SRIJAN "</h1>
